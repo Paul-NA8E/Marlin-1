@@ -42,7 +42,7 @@
 //
 // Servos
 //
-#define SERVO0_PIN                         P1_29
+#define SERVO0_PIN                         P1_30
 
 //
 // Limit Switches
@@ -73,10 +73,24 @@
 #define Z_STEP_PIN                         P2_03
 #define Z_DIR_PIN                          P0_22
 #define Z_ENABLE_PIN                       P0_21
+#define Z_MIN_PIN                          P1_29
 
 #define E0_STEP_PIN                        P2_00
 #define E0_DIR_PIN                         P0_05
 #define E0_ENABLE_PIN                      P0_04
+
+/**
+ * I2C Digipots - MCP4451
+ * Address 58 (2C << 1)
+ * Set from 0 - 127 with stop bit.
+ * (Ex. 3F << 1 | 1)
+ */
+#define DIGIPOTS_I2C_SCL                   P0_0
+#define DIGIPOTS_I2C_SDA_X                 P0_04
+#define DIGIPOTS_I2C_SDA_Y                 P0_10
+#define DIGIPOTS_I2C_SDA_Z                 P0_19
+#define DIGIPOTS_I2C_SDA_E0                P0_21
+#define DIGIPOTS_I2C_SDA_E1                P4_29
 
 //
 // DIGIPOT slave addresses (7-bit unshifted)
@@ -101,7 +115,7 @@
 #define HEATER_BED_PIN                     P2_07
 #define HEATER_0_PIN                       P2_05
 #ifndef FAN_PIN
-  #define FAN_PIN                          P0_26
+  #define FAN_PIN                          P2_04
 #endif
 #define FAN1_PIN                           P1_25
 
