@@ -134,9 +134,9 @@
 //
 // Power Loss Detection
 //
-#ifndef POWER_LOSS_PIN
-  #define POWER_LOSS_PIN                   P1_00  // PWRDET
-#endif
+//#ifndef POWER_LOSS_PIN
+//  #define POWER_LOSS_PIN                   P1_00  // PWRDET
+//#endif
 
 //
 // Steppers
@@ -510,6 +510,13 @@
 //
 #ifndef NEOPIXEL_PIN
   #define NEOPIXEL_PIN                     P1_24
+#endif
+
+//
+// Smart Effector Mod Pin
+//
+#if ENABLED(DUET_SMART_EFFECTOR)
+  #define SMART_EFFECTOR_MOD                P1_0
 #endif
 
 /**
