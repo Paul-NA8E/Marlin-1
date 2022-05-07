@@ -629,9 +629,9 @@
     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
-    #define DEFAULT_Kp  22.20
-    #define DEFAULT_Ki   1.08
-    #define DEFAULT_Kd 114.00
+    #define DEFAULT_Kp  30.1178
+    #define DEFAULT_Ki   2.4099
+    #define DEFAULT_Kd  94.0992
   #endif
 #endif
 
@@ -871,20 +871,20 @@
   #define DELTA_PRINTABLE_RADIUS 180.0     // (mm)
 
   // Center-to-center distance of the holes in the diagonal push rods.
-  #define DELTA_DIAGONAL_ROD 470.4        // (mm)
+  #define DELTA_DIAGONAL_ROD 470.4        // (mm)562
 
   // Distance between bed and nozzle Z home position
-  #define DELTA_HEIGHT 564.0             // (mm) Get this value from G33 auto calibrate
+  #define DELTA_HEIGHT 562.0             // (mm) Get this value from G33 auto calibrate
 
-  #define DELTA_ENDSTOP_ADJ { 0.0 , 0.0, 0.0 } // Get these values from G33 auto calibrate
+  #define DELTA_ENDSTOP_ADJ { -2.1132, 0.0, -1.0647 } // Get these values from G33 auto calibrate
 
   // Horizontal distance bridged by diagonal push rods when effector is centered.
-  #define DELTA_RADIUS 243.6699              // (mm) Get this value from G33 auto calibrate
+  #define DELTA_RADIUS 243.7598              // (mm) Get this value from G33 auto calibrate
 
   // Trim adjustments for individual towers
   // tower angle corrections for X and Y tower / rotate XYZ so Z tower angle = 0
   // measured in degrees anticlockwise looking from above the printer
-  #define DELTA_TOWER_ANGLE_TRIM { 0.00, 0.0, 0.0 } // Get these values from G33 auto calibrate
+  #define DELTA_TOWER_ANGLE_TRIM { 0.0425, 0.1081, -0.1506 } // Get these values from G33 auto calibrate
 
   // Delta radius and diagonal rod adjustments (mm)
   #define DELTA_RADIUS_TRIM_TOWER { 0.0, 0.0, 0.0 }
@@ -1353,17 +1353,17 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { 0.0, 0.0, -0.21 }
+#define NOZZLE_TO_PROBE_OFFSET { 0.0, 0.0, 0.0 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
 #define PROBING_MARGIN 15
 
 // X and Y axis travel speed (mm/min) between probes
-#define XY_PROBE_FEEDRATE (80*60)
+#define XY_PROBE_FEEDRATE (90*60)
 
 // Feedrate (mm/min) for the first approach when double-probing (MULTIPLE_PROBING == 2)
-#define Z_PROBE_FEEDRATE_FAST (85*60)
+#define Z_PROBE_FEEDRATE_FAST (90*60)
 
 // Feedrate (mm/min) for the "accurate" probe of each point
 #define Z_PROBE_FEEDRATE_SLOW (Z_PROBE_FEEDRATE_FAST / 2)
